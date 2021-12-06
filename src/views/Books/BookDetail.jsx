@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
+import { Link, useParams } from 'react-router-dom'
 import Book from '../../components/book/Book'
 import { getBookById } from '../../services/books'
 

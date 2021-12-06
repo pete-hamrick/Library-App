@@ -5,7 +5,6 @@ import Home from './views/Home/Home'
 import './App.css'
 
 function App() {
-  // TODO: Add routes to books & views
   return (
     <main className="container">
       <Router>
