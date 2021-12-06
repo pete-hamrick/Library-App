@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 import Book from '../../components/book/Book'
 import { getBookById } from '../../services/books'
 
 function BookDetail() {
-  const id = 1 // TODO: Use id from route
+  const { id } = useParams() // TODO: Use id from route
   const [book, setBook] = useState(null)
 
   useEffect(() => {
@@ -12,7 +14,14 @@ function BookDetail() {
 
   if (!book) return <h3>Loading book...</h3>
 
-  return <Book book={book} showDetail />
+  return (
+    <>
+      <p>
+        <Link to="/books">Back to Catalog</Link>
+      </p>
+      <Book book={book} showDetail />
+    </>
+  )
 }
 
 export default BookDetail
