@@ -1,0 +1,40 @@
+header > section {
+  display: grid;
+  grid-template: 1fr / 120px 1fr 500px;
+  background-color: #7ca88d;
+  height: 100%;
+  align-items: center;
+}
+
+header > section > aside {
+  justify-self: center;
+}
+
+header > section > aside img {
+  min-height: 50px;
+  max-height: 70px;
+  filter: drop-shadow(2px 2px 0 rgba(20, 20, 20, 0.75));
+}
+
+header > section > nav {
+  grid-area: 1 / 3 / 1 / 3;
+}
+
+header ul {
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: space-around;
+}
+
+header ul li a,
+header ul li button {
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
